@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
 
-    // a) список студентів заданого факультету
+
     public static void printByFaculty(Student[] students, String faculty) {
         boolean found = false;
         System.out.println("\nСтуденти факультету " + faculty + ":");
@@ -17,7 +17,6 @@ public class Main {
         }
     }
 
-    // b) список студентів, які народились після заданого року
     public static void printBornAfter(Student[] students, int year) {
         boolean found = false;
         System.out.println("\nСтуденти, народжені після " + year + " року:");
@@ -33,7 +32,6 @@ public class Main {
         }
     }
 
-    // c) список навчальної групи (пошук за частиною коду групи)
     public static void printByGroup(Student[] students, String group) {
         boolean found = false;
         System.out.println("\nСтуденти групи (пошук за \"" + group + "\"):");
@@ -48,7 +46,6 @@ public class Main {
         }
     }
 
-    // Отримати унікальні факультети
     public static Set<String> getFaculties(Student[] students) {
         Set<String> faculties = new HashSet<>();
         for (Student s : students) {
@@ -57,7 +54,6 @@ public class Main {
         return faculties;
     }
 
-    // Отримати унікальні групи
     public static Set<String> getGroups(Student[] students) {
         Set<String> groups = new HashSet<>();
         for (Student s : students) {
@@ -69,16 +65,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Student[] students = {
-                new Student(1, "Шевченко", "Ірина", "Павлівна", "2002-05-14",
-                        "Київ", "380111111", "ІАДР", 2, "АП-21"),
-                new Student(2, "Литвиненко", "Олег", "Вікторович", "2000-09-23",
-                        "Львів", "380222222", "ІКТА", 3, "ЕОМ-31"),
-                new Student(3, "Сидоренко", "Марія", "Петрівна", "2003-01-10",
-                        "Одеса", "380333333", "ІКТА", 1, "ЕОМ-11"),
-                new Student(4, "Коваль", "Анна", "Сергіївна", "2001-12-01",
-                        "Харків", "380444444", "ІКНІ", 4, "ОС-41")
-        };
+        Student[] students = Student.getDefaultStudents();
 
         while (true) {
             System.out.println("\n===== МЕНЮ =====");

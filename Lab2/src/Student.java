@@ -10,7 +10,6 @@ public class Student {
     private int course;
     private String group;
 
-    // Конструктор
     public Student(int id, String lastName, String firstName, String patronymic,
                    String birthDate, String address, String phone,
                    String faculty, int course, String group) {
@@ -26,7 +25,6 @@ public class Student {
         this.group = group;
     }
 
-    // Методи set/get
     public void setValue(String field, Object value) {
         switch (field.toLowerCase()) {
             case "id": this.id = (int) value; break;
@@ -68,8 +66,20 @@ public class Student {
                 ", група: " + group;
     }
 
-    // Додаткові гетери для зручності
     public String getFaculty() { return faculty; }
     public String getBirthDate() { return birthDate; }
     public String getGroup() { return group; }
+
+    public static Student[] getDefaultStudents() {
+        return new Student[] {
+                new Student(1, "Шевченко", "Ірина", "Павлівна", "2002-05-14",
+                        "Київ", "380111111", "ІАДР", 2, "АП-21"),
+                new Student(2, "Литвиненко", "Олег", "Вікторович", "2000-09-23",
+                        "Львів", "380222222", "ІКТА", 3, "ЕОМ-31"),
+                new Student(3, "Сидоренко", "Марія", "Петрівна", "2003-01-10",
+                        "Одеса", "380333333", "ІКТА", 1, "ЕОМ-11"),
+                new Student(4, "Коваль", "Анна", "Сергіївна", "2001-12-01",
+                        "Харків", "380444444", "ІКНІ", 4, "ОС-41")
+        };
+    }
 }
