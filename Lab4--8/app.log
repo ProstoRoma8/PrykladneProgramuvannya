@@ -1,0 +1,18 @@
+груд. 16, 2025 10:13:19 ПП main.AppContext <clinit>
+INFO: === Запуск програми ===
+груд. 16, 2025 10:13:19 ПП main.AirlineApp main
+INFO: === Запуск додатка AirlineApp ===
+груд. 16, 2025 10:13:21 ПП main.AirlineApp main
+INFO: Авторизація: обрано роль ADMIN
+груд. 16, 2025 10:13:53 ПП commands.AdminCommands.AddPlaneCommand execute
+INFO: Додано новий літак: test (Тип: 2)
+груд. 16, 2025 10:14:02 ПП main.AirlineApp main
+SEVERE: Критичний збій програми!
+java.util.InputMismatchException
+	at java.base/java.util.Scanner.throwFor(Scanner.java:947)
+	at java.base/java.util.Scanner.next(Scanner.java:1602)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2267)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2221)
+	at main.Menu.handleUserInput(Menu.java:27)
+	at main.AirlineApp.main(AirlineApp.java:39)
+
